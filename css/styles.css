@@ -160,9 +160,17 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero-btn {
+.hero-btn,
+.subscribe-form-btn,
+.modal-form-btn {
+  display: flex;
   min-width: 200px;
-  padding: 10px 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
   color: var(--footer-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -178,7 +186,11 @@ ul {
   transition: background-color 250ms var(--timing-function);
 }
 .hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:focus,
+.subscribe-form-btn:hover,
+.subscribe-form-btn:focus,
+.modal-form-btn:hover,
+.modal-form-btn:focus {
   background-color: var(--hero-btn-hover);
 }
 /* преимущества */
@@ -392,7 +404,7 @@ ul {
 .footer-contacts:focus {
   color: var(--accent-color);
 }
-.footer-right {
+.footer-socials-block {
   min-width: 206px;
 }
 .footer .ellipse {
@@ -401,7 +413,7 @@ ul {
 .footer .team-icon {
   fill: var(--footer-color);
 }
-.footer-left {
+.footer-adress-block {
   min-width: 231px;
   margin-right: 70px;
 }
@@ -413,12 +425,43 @@ ul {
   display: flex;
   align-items: baseline;
 }
-.appeal {
+.appeal,
+.subscribe-form-label {
   margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--footer-color);
   font-weight: 700;
   line-height: 1.14;
+}
+/* форма в футере */
+.subscribe {
+  margin-left: auto;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-form-input-raw {
+  display: flex;
+}
+.subscribe-form-svg {
+  margin-left: 10px;
+}
+
+.subscribe-form-input {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-right: 12px;
+  min-width: 358px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: inherit;
+  color: var(--footer-color);
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* СТРАНИЦА ПОРТФОЛИО */
@@ -575,9 +618,69 @@ ul {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-icon {
+.modal-close-icon {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.modal-form {
+  padding: 40px;
+}
+.modal-form-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.modal-form-label {
+  position: absolute;
+  top: -18px;
+  /* высота строки 14px + margin 4px */
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--main-color);
+}
+.modal-form-input {
+  display: block;
+  margin-bottom: 28px;
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  transform: translate(-50%, -50%);
+  fill: var(--secondary-color);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+.textarea {
+  margin-bottom: 20px;
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+}
+.modal-form-field {
+  position: relative;
+}
+.checkbox-area {
+  margin-bottom: 30px;
+}
+.checkbox-link {
+  line-height: 1.71;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--accent-color);
 }

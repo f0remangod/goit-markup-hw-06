@@ -691,8 +691,8 @@
             />
             <svg
               class="modal-form-icon"
-              width="12px"
-              height="12px"
+              width="15px"
+              height="15px"
               aria-label="Name"
             >
               <use href="./images/sprite.svg#icon-modal-name"></use>
@@ -710,8 +710,8 @@
             />
             <svg
               class="modal-form-icon"
-              width="13px"
-              height="13px"
+              width="15px"
+              height="15px"
               aria-label="Telephone"
             >
               <use href="./images/sprite.svg#icon-modal-tel"></use>
@@ -745,11 +745,17 @@
             ></textarea>
           </div>
           <div class="checkbox-area">
-            <input type="checkbox" name="agreement" value="" id="checkbox" />
-            <label for="checkbox"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="checkbox-link" href="#">Условия договора</a></label
-            >
+            <label class="checkbox-label" for="checkbox">
+              <input
+                class="checkbox-input"
+                type="checkbox"
+                name="agreement"
+                value=""
+                id="checkbox"
+              />
+              <span class="qwe"></span>
+              Соглашаюсь с рассылкой и принимаю </label
+            ><a class="checkbox-link" href="#">Условия договора</a>
           </div>
           <button class="modal-form-btn" type="submit">Отправить</button>
         </form>

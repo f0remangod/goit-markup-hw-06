@@ -463,6 +463,10 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.subscribe-form-input:focus {
+  border: 1px solid var(--footer-color);
+  outline-width: 0px;
+}
 
 /* СТРАНИЦА ПОРТФОЛИО */
 .portfolio {
@@ -655,13 +659,15 @@ ul {
   color: var(--secondary-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
 }
 .modal-form-icon {
   position: absolute;
   top: 50%;
-  left: 21px;
-  transform: translate(-50%, -50%);
+  left: 12px;
+  transform: translateY(-50%);
   fill: var(--secondary-color);
+  transition: fill 250ms var(--timing-function);
 }
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-color);
@@ -681,10 +687,47 @@ ul {
 }
 .checkbox-area {
   margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .checkbox-link {
+  padding-left: 0.3rem;
   line-height: 1.71;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--accent-color);
+}
+.checkbox-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.qwe {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: inherit;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 8px;
+  background-image: none;
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function),
+    background-image 250ms var(--timing-function);
+}
+.checkbox-input:checked + .qwe {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  background-image: url("../images/checkmark.svg");
+  background-size: contain;
+  background-origin: border-box;
 }

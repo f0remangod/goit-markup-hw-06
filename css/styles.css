@@ -711,7 +711,7 @@ ul {
   appearance: none;
   position: absolute;
 }
-.qwe {
+.checkbox-icon {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -724,7 +724,7 @@ ul {
     border-color 250ms var(--timing-function),
     background-image 250ms var(--timing-function);
 }
-.checkbox-input:checked + .qwe {
+.checkbox-input:checked + .checkbox-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-image: url("../images/checkmark.svg");
